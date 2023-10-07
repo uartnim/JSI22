@@ -1,0 +1,85 @@
+/* style cho tất cả các thẻ */
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    border: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+
+.container {
+    display: flex;
+    background-color: #A0A0A0;
+    height: 1500px;
+    width: auto;
+    justify-content: center;
+}
+
+
+.main {
+    background-image: url(./rain.jfif);
+    background-repeat: round;
+    width: 500px;
+    height: 800px;
+    background-color: red;
+    border-radius: 40px;
+    /* justify-content: center;
+    display: flex; */
+}
+
+.search_box {
+    height: 50px;
+    padding-left: 50px;
+}
+
+
+.search_box .place_input {
+    width: 400px;
+    height: 50px;
+    border-radius: 30px;
+    margin-top: 30px;
+}
+
+
+/* .place_infor{
+    margin-top: 130px;
+    margin-left: 200px;
+} */
+
+
+.place_infor {
+    margin: 0 9rem;
+    background-color: white;
+    height: 45vh;
+    margin: 50px auto;
+    border-radius: 2px;
+}
+
+.place_infor h2 {
+    padding: 5px 0;
+    text-align: center;
+    background: #0548b5;
+    color: white;
+    font-family: sans-serif;
+}
+
+
+.place_infor p {
+    margin: 20px 50px;
+    margin-right: 20px;
+    text-align: left;
+    color: #04214c;
+    font-size: 23px;
+}
+
+.place_infor h2 span {
+    font-size: 26px;
+    color: #9beefb;
+}
+
+.place_infor p span {
+    color: #90006e;
+    font-size: 25px;
+}
