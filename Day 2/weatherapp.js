@@ -2,6 +2,7 @@
 let input_search_address = document.getElementById("search_weather");
 let search_button = document.querySelector("button");
 let temperature = document.getElementById("temperature");
+let placeTime = document.getElementById("dateTime");
 let imgTemp = document.querySelector(".image_temperature");
 let img = document.createElement("img");
 img.scr = "";
@@ -54,15 +55,47 @@ search_button.addEventListener("click", function () {
                         document.body.style.backgroundImage = "url('./raining.gif')";
                         document.body.style.backgroundRepeat = "no-repeat";
 
-                        
+
                     } else if (weather_code >= 77 && weather_code <= 99) {
                         document.body.style.backgroundImage = "url('./thunder.gif')";
                         document.body.style.backgroundRepeat = "no-repeat";
+                        document.body.style.color ="white";
 
-                        
+
                     }
                     temperature.innerText = data_weather.current_weather.temperature;
                     console.log(data_weather.current_weather.temperature);
+
+                    let d = new Date();
+                    let localTime = d.getTime();
+                    let localOffset = d.getTimezoneOffset() * 60000;
+                    let utc = localTime + localOffset;
+                    let place = utc + (1000 * -14400);
+                    let nd = new Date(place);
+
+
+                    function getMode(response) {
+                        let today = response.data_weather.dt;
+                        let timezone = response.data_weather.timezone;
+                        let difference = today + timezone - 3600;
+                        let hours = timeConverter2(difference);
+                        let mode = document.getElementById("app");
+                    
+
+                        if (hours > 17 || hours < 6) {
+                            mode.classList.add("darkmode").remove("lightmode");
+                          }
+                          else {
+                            mode.classList.add("lightmode").remove("darkmode");
+                          }
+
+                          if (hours >= 6 && hours <= 17) {
+                            mode.classList.add("lightmode").remove("darkmode");
+                          }
+                          else {
+                            mode.classList.add("darkmode").remove("lightmode");
+                          }
+                      }
                 });
         });
 });
