@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&family=Noto+Serif+Old+Uyghur&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+
+}
+
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+    background-color: #808080;
+}
+
+.logo {
+    cursor: pointer;
+}
+
+.nav-links {
+    list-style: none;
+
+}
+
+.nav-links li {
+    display: inline-block;
+    padding: 0 20px;
+    font-family: 'Noto Serif Old Uyghur', serif;
+    font-weight: 500;
+    font-size: 20px;
+    text-decoration: none;
+    color: #f5f5f1 !important;
+}
+
+.nav-links li a {
+    color: #f5f5f1 !important;
+
+}
+
+.nav-links li button {
+    transition: all 0.3s ease 0s;
+}
+
+.nav-links li a:hover {
+
+    text-decoration: none;
+}
+
+button {
+    padding: 9px 25px;
+    background-color: rgba(0, 136, 169, 1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+/* post */
+.main {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.post {
+    display: flex;
+    margin-top: 50px;
+    justify-content: center;
+}
+
+.row {
+    flex-wrap: wrap;
+    margin-left: 20px;
+}
+
+.row a {
+    color: #777;
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+
+
+.row .fa {
+    font-weight: 900;
+    color: #222;
+}
+
+
+.feature-img img {
+    width: 510px;
+    height: 238px; 
+    border-style: none;
+}
+
+.posts {
+    height: 437px;
+    width: 540px;
+}
+
+.posts-title h3 {
+    margin: 20px 0px;
+    font-size: 23px;
+    font-family: 'Roboto', sans-serif;
+    color: rgb(233, 157, 15);
+}
+
+.single-post .excert {
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #808080;
+    font-family: 'Noto Serif Old Uyghur', serif;
+
+}
+
+.single-post .primary-btn {
+    background: #fff;
+    color: #222;
+    border-radius: 3px solid black;
+    text-decoration: none;
+}
+
+.single-post .primary-btn:hover {
+    background-color: rgb(233, 157, 15);
+    color: #fff;
+    border-radius: 3px solid #777;
+
+}
